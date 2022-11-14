@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             Text(
-              'Keep in touch through telegram',
+              'Keep in touch through telegram.',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             const SizedBox(
