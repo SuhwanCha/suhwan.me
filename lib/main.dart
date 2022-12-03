@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:suhwan_me/color_schemes.g.dart';
 import 'package:suhwan_me/home_screen.dart';
 
 void main() {
@@ -15,41 +16,13 @@ class MyApp extends StatelessWidget {
       title: 'Suhwan Cha',
       themeMode: ThemeMode.system,
       theme: ThemeData(
-        brightness: Brightness.light,
-        primarySwatch: Colors.blue,
-        textTheme: const TextTheme(
-          headlineLarge: TextStyle(
-            fontSize: 40,
-            fontWeight: FontWeight.bold,
-          ),
-          // headlineMedium: TextStyle(
-          //   fontSize: 20,
-          //   fontWeight: FontWeight.bold,
-          // ),
-          labelLarge: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
+          useMaterial3: true,
+          colorScheme: lightColorScheme,
+          fontFamily: 'Pretendard'),
       darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        primarySwatch: Colors.blue,
-        textTheme: const TextTheme(
-          headlineLarge: TextStyle(
-            fontSize: 40,
-            fontWeight: FontWeight.bold,
-          ),
-          // headlineMedium: TextStyle(
-          //   fontSize: 20,
-          //   fontWeight: FontWeight.bold,
-          // ),
-          labelLarge: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
+          useMaterial3: true,
+          colorScheme: darkColorScheme,
+          fontFamily: 'Pretendard'),
       home: const HomeScreen(),
     );
   }

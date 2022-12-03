@@ -9,41 +9,59 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Suhwan Cha',
-              style: Theme.of(context).textTheme.headlineLarge,
-            ),
-            Text(
-              'I\'m currently taking a break from social networks and messaging apps.',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            Text(
-              'Keep in touch through telegram.',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            // large button
-            ElevatedButton(
-              onPressed: () {
-                // launch url
-                launchUrl(Uri.parse('https://t.me/suhwan_cha'));
-              },
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 30,
-                  vertical: 15,
-                ),
-                textStyle: Theme.of(context).textTheme.labelLarge,
+        child: SizedBox(
+          width: double.infinity,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Suhwan Cha',
+                style: Theme.of(context).textTheme.headlineLarge,
               ),
-              child: const Text('Open Telegram'),
-            ),
-          ],
+              Text(
+                'Thank you for visiting my website!',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+              Text(
+                'You can find my resume, projects, and contact information below.',
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+
+              Row(
+                children: [
+                  ElevatedButton(
+                    onPressed: () => launchUrl(
+                      Uri.parse('https://www.linkedin.com/in/suhwan/'),
+                    ),
+                    child: const Text('LinkedIn'),
+                  ),
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  ElevatedButton(
+                    onPressed: () => launchUrl(
+                      Uri.parse('https://github.com/suhwancha/'),
+                    ),
+                    child: const Text('GitHub'),
+                  ),
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      launchUrl(Uri.parse('https://t.me/suhwan_cha'));
+                    },
+                    child: const Text('Telegram'),
+                  ),
+                ],
+              ),
+              // large button
+            ],
+          ),
         ),
       ),
     );
