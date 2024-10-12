@@ -45,29 +45,29 @@ class HomeScreen extends StatelessWidget {
                     height: 20,
                   ),
 
-                  Row(
-                    children: [
-                      ElevatedButton(
-                        onPressed: () => launchUrl(
-                          Uri.parse('/resume.pdf'),
-                        ),
-                        child: const Text('Resume'),
-                      ),
-                      const SizedBox(
-                        width: 8,
-                      ),
-                      ElevatedButton(
-                        onPressed: () => launchUrl(
-                          Uri.parse('/flutter_portfolio.pdf'),
-                        ),
-                        child: const Text('Flutter Portfolio'),
-                      ),
-                    ],
-                  ),
+                  // Row(
+                  //   children: [
+                  //     ElevatedButton(
+                  //       onPressed: () => launchUrl(
+                  //         Uri.parse('/resume.pdf'),
+                  //       ),
+                  //       child: const Text('Resume'),
+                  //     ),
+                  //     const SizedBox(
+                  //       width: 8,
+                  //     ),
+                  //     ElevatedButton(
+                  //       onPressed: () => launchUrl(
+                  //         Uri.parse('/flutter_portfolio.pdf'),
+                  //       ),
+                  //       child: const Text('Flutter Portfolio'),
+                  //     ),
+                  //   ],
+                  // ),
 
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  // const SizedBox(
+                  //   height: 20,
+                  // ),
                   Text(
                     'Contact',
                     style: Theme.of(context).textTheme.headlineMedium?.copyWith(
@@ -121,6 +121,47 @@ class HomeScreen extends StatelessWidget {
                     height: 10,
                   ),
 
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Frontend Engineer',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyLarge
+                                  ?.copyWith(
+                                    color: Colors.black,
+                                  ),
+                            ),
+                            Text(
+                              'eZar Inc.',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyLarge
+                                  ?.copyWith(
+                                    color: Colors.black,
+                                  ),
+                            ),
+                            Text(
+                              'Jan. 2024 - Present',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodySmall
+                                  ?.copyWith(
+                                    color: Colors.black,
+                                  ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 4,
+                  ),
                   Row(
                     children: [
                       Expanded(
@@ -182,6 +223,47 @@ class HomeScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
+                              'Sogang University',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyLarge
+                                  ?.copyWith(
+                                    color: Colors.black,
+                                  ),
+                            ),
+                            Text(
+                              'Master of Engineering',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodySmall
+                                  ?.copyWith(
+                                    color: Colors.black,
+                                  ),
+                            ),
+                            Text(
+                              'Sep. 2024 - (Expected) Feb. 2027',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodySmall
+                                  ?.copyWith(
+                                    color: Colors.black,
+                                  ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 4,
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
                               'Kyung Hee University',
                               style: Theme.of(context)
                                   .textTheme
@@ -216,83 +298,83 @@ class HomeScreen extends StatelessWidget {
 
                   // skills
 
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  // const SizedBox(
+                  //   height: 20,
+                  // ),
 
-                  Text(
-                    'Skills',
-                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                          color: Colors.black,
-                        ),
-                  ),
+                  // Text(
+                  //   'Skills',
+                  //   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                  //         color: Colors.black,
+                  //       ),
+                  // ),
 
-                  const SizedBox(
-                    height: 10,
-                  ),
+                  // const SizedBox(
+                  //   height: 10,
+                  // ),
 
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                color: Theme.of(context).colorScheme.secondary,
-                                borderRadius: BorderRadius.circular(5),
-                              ),
-                              padding: const EdgeInsets.all(8),
-                              child: const Wrap(
-                                spacing: 8,
-                                runSpacing: 8,
-                                children: [
-                                  Chip(
-                                    label: Text('Flutter/Dart w/Bloc'),
-                                  ),
-                                  Chip(
-                                    label: Text(
-                                        'JavaScript/TypeScript w/React, Node.js'),
-                                  ),
-                                  // go lang
-                                  Chip(
-                                    label: Text('Go w/Gin, Gorm'),
-                                  ),
-                                  Chip(
-                                    label: Text('MySQL'),
-                                  ),
-                                  Chip(
-                                    label: Text('AWS'),
-                                  ),
-                                  Chip(
-                                    label: Text('Docker/Kubernetes'),
-                                  ),
-                                  Chip(
-                                    label: Text('CI/CD'),
-                                  ),
-                                  Chip(
-                                    label: Text('HTML/CSS/SCSS'),
-                                  ),
-                                  Chip(
-                                    label: Text('JavaScipt/TypeScript'),
-                                  ),
-                                  Chip(
-                                    label: Text('Vue.js'),
-                                  ),
-                                  Chip(
-                                    label: Text('PHP/Laravel'),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
+                  // Row(
+                  //   children: [
+                  //     Expanded(
+                  //       child: Column(
+                  //         crossAxisAlignment: CrossAxisAlignment.start,
+                  //         children: [
+                  //           Container(
+                  //             decoration: BoxDecoration(
+                  //               color: Theme.of(context).colorScheme.secondary,
+                  //               borderRadius: BorderRadius.circular(5),
+                  //             ),
+                  //             padding: const EdgeInsets.all(8),
+                  //             child: const Wrap(
+                  //               spacing: 8,
+                  //               runSpacing: 8,
+                  //               children: [
+                  //                 Chip(
+                  //                   label: Text('Flutter/Dart w/Bloc'),
+                  //                 ),
+                  //                 Chip(
+                  //                   label: Text(
+                  //                       'JavaScript/TypeScript w/React, Node.js'),
+                  //                 ),
+                  //                 // go lang
+                  //                 Chip(
+                  //                   label: Text('Go w/Gin, Gorm'),
+                  //                 ),
+                  //                 Chip(
+                  //                   label: Text('MySQL'),
+                  //                 ),
+                  //                 Chip(
+                  //                   label: Text('AWS'),
+                  //                 ),
+                  //                 Chip(
+                  //                   label: Text('Docker/Kubernetes'),
+                  //                 ),
+                  //                 Chip(
+                  //                   label: Text('CI/CD'),
+                  //                 ),
+                  //                 Chip(
+                  //                   label: Text('HTML/CSS/SCSS'),
+                  //                 ),
+                  //                 Chip(
+                  //                   label: Text('JavaScipt/TypeScript'),
+                  //                 ),
+                  //                 Chip(
+                  //                   label: Text('Vue.js'),
+                  //                 ),
+                  //                 Chip(
+                  //                   label: Text('PHP/Laravel'),
+                  //                 ),
+                  //               ],
+                  //             ),
+                  //           ),
+                  //           const SizedBox(
+                  //             height: 20,
+                  //           ),
+                  //         ],
+                  //       ),
+                  //     )
+                  //   ],
+                  // ),
                   const SizedBox(
                     height: 20,
                   ),
